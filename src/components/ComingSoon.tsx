@@ -15,8 +15,8 @@ const ComingSoon: React.FC = () => {
   }, []);
 
   const ContactIcon: React.FC<{ icon: React.ReactNode }> = ({ icon }) => (
-    <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-[#493c3c] hover:bg-white transition-all duration-300 ease-in-out transform hover:scale-105">
-      <div className="h-6 w-6 text-white group-hover:text-[#493c3c] transition-colors duration-300">
+    <div className="group flex h-12 w-12 items-center justify-center rounded-full bg-[#493c3c] transition-transform transition-colors duration-200 ease-out hover:scale-105 hover:bg-white will-change-transform">
+      <div className="h-6 w-6 text-white transition-colors duration-200 ease-out group-hover:text-[#493c3c]">
         {icon}
       </div>
     </div>

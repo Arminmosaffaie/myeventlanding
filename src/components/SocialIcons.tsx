@@ -1,34 +1,34 @@
 import React from 'react';
 import { Facebook, Instagram } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const SocialIcons: React.FC = () => {
-  const iconContainerStyle = "group flex h-12 w-12 items-center justify-center rounded-full bg-[#493c3c] hover:bg-white";
-  const iconStyle = "h-6 w-6 text-white group-hover:text-[#493c3c]";
-  
+  const iconClass =
+    "h-6 w-6 text-white transition-colors duration-200 ease-out group-hover:text-[#493c3c]";
+  const wrapperClass =
+    "group flex h-12 w-12 items-center justify-center rounded-full bg-[#493c3c] transition-transform transition-colors duration-200 ease-out hover:scale-105 hover:bg-white will-change-transform";
+
   return (
     <div className="flex items-center justify-center space-x-6">
-      <motion.a 
-        href="https://instagram.com" 
+      <a
+        href="https://www.instagram.com/myevent.wermland/"
         target="_blank"
         rel="noopener noreferrer"
-        className={iconContainerStyle}
-        whileHover={{ scale: 1.02 }}
-        transition={{ type: "tween", duration: 0.2 }}
+        className={wrapperClass}
       >
-        <Instagram className={iconStyle} />
-      </motion.a>
-      
-      <motion.a 
-        href="https://facebook.com" 
+        <span className={iconClass}>
+          <Instagram />
+        </span>
+      </a>
+      <a
+        href="https://www.facebook.com/myeventwermland"
         target="_blank"
         rel="noopener noreferrer"
-        className={iconContainerStyle}
-        whileHover={{ scale: 1.02 }}
-        transition={{ type: "tween", duration: 0.2 }}
+        className={wrapperClass}
       >
-        <Facebook className={iconStyle} />
-      </motion.a>
+        <span className={iconClass}>
+          <Facebook />
+        </span>
+      </a>
     </div>
   );
 };
